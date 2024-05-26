@@ -10,9 +10,9 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<!-- action속성: form에 작성한 데이터를 어디로 보낼지 지정 -->
-<form action="/member/save" method="post">
-    <!-- name속성: 서버로 전송할 때 변수이름의 역할 -->
+<!-- action속성: form에 작성한 데이터를 어디로 보낼지 지정하는 역할 수행 -->
+<form action="/member/save" method="post"> <!-- 전달되는 내용이 보이지 않게 post 메서드 사용 -->
+    <!-- name속성: 서버로 전송할 때 변수이름의 역할을 수행 -->
     이메일: <input type="text" name="memberEmail" id="memberEmail" onblur="emailCheck()"> <br>
     <p id="check-result"></p>
     비밀번호: <input type="password" name="memberPassword"> <br>
