@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
-@RequiredArgsConstructor
+@RequiredArgsConstructor //lombok 라이브러리에서 제공하는 어노테이션 중 하나
 public class MemberController {
     // 생성자 주입
     private final MemberService memberService;
@@ -24,9 +24,9 @@ public class MemberController {
 
     @PostMapping("/member/save")
     public String save(@ModelAttribute MemberDTO memberDTO) {
-        System.out.println("MemberController.save");
+        System.out.println("MemberController.save"); //현 메서드가 무엇인지를 출력
         System.out.println("memberDTO = " + memberDTO);
-        memberService.save(memberDTO);
+        memberService.save(memberDTO); //save 메서드 정의
         return "login";
     }
 
